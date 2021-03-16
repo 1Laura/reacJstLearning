@@ -1,29 +1,25 @@
 import React, {useState} from "react"
 
 
-function PlusMinus(cardStyle, image, name, description, date) {
-    let [getPlus, setPlus] = useState(10)
-    let [getMinus, setMinus] = useState(10)
+function PlusMinus() {
+    let [getPoints, setPoints] = useState(1000)
+
+    function plusPoints() {
+        setPoints(getPoints + 1)
+    }
+
+    function minusPoints() {
+        setPoints(getPoints - 1)
+    }
 
 
-    return
-    (
-        <div className="rowCard" style={cardStyle}>
-            <div>
-                <h2></h2>
-
+    return (
+        <div className="plusMinus">
+            <h2>{getPoints}</h2>
+            <div className="buttons">
+                <button onClick={plusPoints}>Plus</button>
+                <button onClick={minusPoints}>Minus</button>
             </div>
-            <div className="oneCard">
-                <div id="img">
-                    <img id="imgEarth" src={image} alt=""/>
-                </div>
-                <h1>{name}</h1>
-                <p>{description}</p>
-                <h6>{date}</h6>
-            </div>
-
-
-
         </div>
 
     );

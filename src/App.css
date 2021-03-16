@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    /*display: flex;*/
+    display: flex;
     /*margin: 20px 30px 0 30px;*/
 }
 
@@ -97,4 +97,10 @@ button {
     display: flex;
     background-color: #777777;
     justify-content: center;
+}
+
+.buttonColor {
+    border: 1px solid #000000;
+    width: 200px;
+    margin: 5px
 }

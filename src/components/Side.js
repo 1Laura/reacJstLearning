@@ -1,11 +1,11 @@
 import React from "react"
 
 
-function Side(props) {
+function Side(linkSide) {
 
     return (
         <div className="sideBar">
-            <div>{props.linkSide}</div>
+            <div>{linkSide}</div>
         </div>
     );
 }
