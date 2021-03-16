@@ -6,7 +6,6 @@ function Colors({colors}) {
 
     function changeColor(color) {
         setColor(color)
-
     }
 
     return (

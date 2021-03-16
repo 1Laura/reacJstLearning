@@ -104,3 +104,14 @@ button {
     width: 200px;
     margin: 5px
 }
+
+.Number {
+    /*margin: auto 0;*/
+    text-align: center;
+}
+
+.numberBox {
+    display: flex;
+    justify-content: center;
+
+}
