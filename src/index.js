@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import NumbersBox from "./NumbersBox";
+// import NumbersBox from "./NumbersBox";
+import BuyProduct from "./BuyProduct";
 
 ReactDOM.render(
     <React.StrictMode>
-        <NumbersBox />
+        <BuyProduct />
     </React.StrictMode>,
     document.getElementById('root')
 );

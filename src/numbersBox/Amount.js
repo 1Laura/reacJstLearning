@@ -1,8 +1,8 @@
-function Amount(props) {
+function Amount(addNum, sum) {
 
     return (
         <div>
-            <button onClick={() => props.addNum(props.sum)}>{props.sum}</button>
+            <button onClick={() => addNum(sum)}>{sum}</button>
         </div>
     )
 }
