@@ -1,5 +1,5 @@
-import './App.css';
-import Amount from "./numbersBox/Amount"
+import '../App.css';
+import Amount from "./Amount"
 import {useState} from 'react'
 
 function NumbersBox() {

@@ -1,4 +1,4 @@
-function Amount(addNum, sum) {
+function Amount({addNum, sum}) {
 
     return (
         <div>

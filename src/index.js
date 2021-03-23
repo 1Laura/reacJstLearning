@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import NumbersBox from "./NumbersBox";
-import BuyProduct from "./BuyProduct";
+import App from "./mazyteUzduotele/App";
+// import NumbersBox from "./numbersBox/NumbersBox";
+// import BuyProduct from "./BuyProduct";
+import CookiesGame from "./cookiesGame/CookiesGame";
 
 ReactDOM.render(
     <React.StrictMode>
-        <BuyProduct />
+        <CookiesGame/>
     </React.StrictMode>,
     document.getElementById('root')
 );

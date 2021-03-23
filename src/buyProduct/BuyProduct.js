@@ -1,5 +1,5 @@
-import './App.css';
-import ProductCard from "./buyProduct/ProductCard"
+import '../App.css';
+import ProductCard from "./ProductCard"
 import {useState} from 'react'
 
 function BuyProduct() {
