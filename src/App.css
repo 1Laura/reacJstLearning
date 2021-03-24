@@ -105,9 +105,9 @@ button {
     }
 }
 
-.btn {
-    width: 300px;
-}
+/*.btn {*/
+/*    width: 300px;*/
+/*}*/
 
 /*cookies end*/
 
@@ -123,5 +123,12 @@ button {
     border: 1px solid black;
     /*height: 100px;*/
 }
+
 /*mazyte uzduotele end*/
 
+/*add img delete start*/
+.wrapper {
+    width: 600px;
+}
+
+/*add img delete end*/
