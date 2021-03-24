@@ -95,6 +95,7 @@ button {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
 @keyframes cookieSpin {
     from {
         transform: rotate(0deg)
@@ -110,11 +111,17 @@ button {
 
 /*cookies end*/
 
+/*Loops start*/
+.Loop {
+}
+
+/*Loops end*/
+
+
 /*mazyte uzduotele*/
 .caard {
     border: 1px solid black;
     /*height: 100px;*/
 }
+/*mazyte uzduotele end*/
 
-
-/*mazytre uzduotele end*/
