@@ -1,6 +1,5 @@
 import '../App.css';
-// import Addition from './Addition';
-// import Show from './Show';
+
 import React, {useState} from "react";
 
 function App() {
@@ -29,14 +28,14 @@ function App() {
 
     function addPost() {
         // thing = {}
-        console.log(getInput)
+        // console.log(getInput)
         //susjungiu sena array su duomenim, ir idedu nauja posta
         //ant setPost negalima naudoti push, nes cia yra metodas
         setPosts([...getPosts, getInput])
     }
 
     function deletePost(index) {
-        console.log(index)
+        // console.log(index)
         let arr = getPosts
         //grazina tuos index is postu arr kurie nesutampa su mano paspaustu indeksu, kuri atsiunciu
         //ind kiekvieno elemento indeksas

@@ -126,6 +126,10 @@ button {
 
 /*mazyte uzduotele end*/
 
+.borderActive {
+    border: 4px solid black;
+}
+
 /*add img delete start*/
 .wrapper {
     width: 600px;
