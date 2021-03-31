@@ -4,11 +4,8 @@ import {useState} from "react";
 
 
 function App() {
-    let [getShadow, setShadow] = useState(true)
     let [getBgColor, setBgColor] = useState('#ffffff')
-    let [getBorder, setBorder] = useState(true)
-    let [getScore, setScore] = useState(100)
-
+    let [getCounter, setCounter] = useState(0)
     let arr = [
         {
             color: "#86bb58",
@@ -53,32 +50,28 @@ function App() {
 // will have button to add counter - sending counter number to parent component and adds to total sum
 // will have class active or disabled depending on class key, (both classes should make component look different)
 
-    function countScore(num) {
-        console.log(getScore + num)
-        // return setScore(getScore + num)
-    }
 
     return (
-        <div style={{backgroundColor: getBgColor}} className={"App"}>
+        <div style={{backgroundColor: getBgColor}} className={"text-center my-3"}>
+            <div>
+                <h4>Counter: {getCounter} </h4>
+            </div>
+            <div className={"App"}>
+                {
+                    arr.map((item, index) =>
+                        <Card
+                            key={index}
+                            item={item}
+                            changeBg={setBgColor}
+                            addCounter={(count) => setCounter(getCounter + count)}
+                        />
+                    )
+                }
+            </div>
 
-            {
-                arr.map((item, index) =>
-                    <Card
-                        key={index}
-                        item={item}
-                        changeBg={setBgColor}
-                        border={item.border}
-                        points={getScore}
-                        score={setScore(getScore + item.counter)}
-
-                    />
-                )
-            }
 
         </div>
     );
-
-
 }
 
 export default App

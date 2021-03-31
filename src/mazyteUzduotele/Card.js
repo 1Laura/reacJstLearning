@@ -1,15 +1,17 @@
-function Card({item,  changeBg, points, score}) {
-    let style={
-        boxShadow: item.shadow
+function Card({item, changeBg, addCounter}) {
+    let style = {
+        boxShadow: item.shadow ? "10px 10px 5px -7px rgba(0,0,0,0.75)" : null,
+        border: item.border ? "2px solid black" : null,
     }
 
-    console.log(item.counter + points)
-    console.log(score)
     return (
-        <div className={"caard mx-5"}>
+        <div className={`caard mx-2 ${item.class}`} style={style}>
             <h6>{item.text}</h6>
-            <button onClick={changeBg} style={{backgroundColor: item.color}}>Send color</button>
-            <button onClick={score}>Score {item.counter}</button>
+            <button onClick={() => changeBg(item.color)}
+                    style={{backgroundColor: item.color}}>Click me
+            </button>
+            {/*                    props       parametras, kuri nusiunciam*/}
+            <button onClick={()=>addCounter(item.counter)}>Add {item.counter}</button>
         </div>
     )
 }
