@@ -10,7 +10,13 @@ function App() {
 // in main component you have only points counter and array with questions
 // in child component you have question with answers
 
-    let [getScore, setScore] = useState(0)
+    let [getPoints, setPoints] = useState(0)
+
+    //usestates, koki quizo klausima rodyti
+    //kelintas klausimas yra getQuiz
+    let [getQuiz, setQuiz] = useState(0)
+    //pacioje pradzioje yra ne gamoOveris
+    let [getGameOver, setGameOver] = useState(false)
 
     let quiz = [
         {
@@ -40,23 +46,43 @@ function App() {
         }
     ]
 
-    function check() {
-
+    function answerMade(index) {
+        //i sita f-ija ateis index
+        console.log(index)
+        //gaunu esama objekta su klausimu
+        //patikrinu esama teisinga atsakymo indeksa su gautu is Quiz componento
+        if (quiz[getQuiz].correct === index) {
+            //jei teisingas atsakymas, tai prie esamu (prie senos reiksmes) tasku, pridedu 1 taska
+            setPoints(getPoints + 1)
+        }
+        //noriu pakeisti i kita klausima
+        setQuiz(getQuiz + 1)
+        //jei gauti klausimu yra daugiau, nei array ilgis, tada game over, zaidimo pabaiga
+        //uzsetinu i false
+        if (getQuiz === 4) {
+            setGameOver(true)
+        }
     }
-
 
     return (
         <div className={"d-block m-5"}>
-            <div className={"m-5"}>
-                <h1>Score: {getScore} </h1>
-            </div>
-            <div className={""}>
-                <Quiz
-                    obj={quiz[0]}
+            {
+                getGameOver ? <h1>GAME IS OVER</h1> : <div>
+                    <div className={"m-5"}>
+                        <h2>Points: {getPoints} </h2>
+                    </div>
 
-                />
+                    <div className={""}>
+                        <Quiz
+                            // kad keistusi klausimai, paduodu getQuiz
+                            quiz={quiz[getQuiz]}
+                            // kvieciu f-ija, i kuria ateis index
+                            answer={answerMade}
+                        />
+                    </div>
+                </div>
+            }
 
-            </div>
 
         </div>
     );
